@@ -1,0 +1,53 @@
+
+Sat Jun 10 09:18:05 2023
+Traceback (most recent call last):
+  File "c:\Users\rohit\Downloads\th 1\test4.py", line 1135, in gaming
+    train_army()
+  File "c:\Users\rohit\Downloads\th 1\test4.py", line 816, in train_army
+    clicks = int(int(reader.readtext(img, allowlist = "0123456789", detail = 0)[0])/5)
+IndexError: list index out of range
+
+Sat Jun 10 09:36:27 2023
+Traceback (most recent call last):
+  File "c:\Users\rohit\Downloads\th 1\coc automation.py", line 1126, in gaming
+    do_research()
+  File "c:\Users\rohit\Downloads\th 1\coc automation.py", line 281, in do_research
+    coordinates = np.where(cv2.matchTemplate(img, template, cv2.TM_CCOEFF_NORMED) >= 0.7)
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1164: error: (-215:Assertion failed) (depth == CV_8U || depth == CV_32F) && type == _templ.type() && _img.dims() <= 2 in function 'cv::matchTemplate'
+
+
+Sat Jun 10 23:43:02 2023
+Traceback (most recent call last):
+  File "c:\Users\rohit\Downloads\th 1\test4.py", line 1133, in gaming
+    do_research()
+  File "c:\Users\rohit\Downloads\th 1\test4.py", line 281, in do_research
+    coordinates = np.where(cv2.matchTemplate(img, template, cv2.TM_CCOEFF_NORMED) >= 0.7)
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1164: error: (-215:Assertion failed) (depth == CV_8U || depth == CV_32F) && type == _templ.type() && _img.dims() <= 2 in function 'cv::matchTemplate'
+
+
+Sun Jun 11 00:02:01 2023
+Traceback (most recent call last):
+  File "c:\Users\rohit\Downloads\th 1\test4.py", line 1133, in gaming
+    do_research()
+  File "c:\Users\rohit\Downloads\th 1\test4.py", line 281, in do_research
+    coordinates = np.where(cv2.matchTemplate(img, template, cv2.TM_CCOEFF_NORMED) >= 0.7)
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1164: error: (-215:Assertion failed) (depth == CV_8U || depth == CV_32F) && type == _templ.type() && _img.dims() <= 2 in function 'cv::matchTemplate'
+
+
+Sun Jun 11 07:14:44 2023
+Traceback (most recent call last):
+  File "c:\Users\rohit\Downloads\th 1\test4.py", line 1127, in gaming
+    do_research()
+  File "c:\Users\rohit\Downloads\th 1\test4.py", line 281, in do_research
+    coordinates = np.where(cv2.matchTemplate(img, template, cv2.TM_CCOEFF_NORMED) >= 0.7)
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1164: error: (-215:Assertion failed) (depth == CV_8U || depth == CV_32F) && type == _templ.type() && _img.dims() <= 2 in function 'cv::matchTemplate'
+
+
+Sun Jun 11 11:37:02 2023
+Traceback (most recent call last):
+  File "c:\Users\rohit\Downloads\th 1\test4.py", line 1128, in gaming
+    do_research()
+  File "c:\Users\rohit\Downloads\th 1\test4.py", line 282, in do_research
+    coordinates = np.where(cv2.matchTemplate(img, template, cv2.TM_CCOEFF_NORMED) >= 0.7)
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1164: error: (-215:Assertion failed) (depth == CV_8U || depth == CV_32F) && type == _templ.type() && _img.dims() <= 2 in function 'cv::matchTemplate'
+

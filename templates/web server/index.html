@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>coc automation</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="file/templates/web server/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="file/templates/web server/styles.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="video">
+        <img id="streaming" src="{{ url_for('video_feed') }}" width="960" height="540" onclick="getImageCoordinates(event)">
+      </div>
+      <div>
+        <div class="data">
+          <p id="datas" style="font-family: 'Poppins', sans-serif; text-align: center;">datas of the program is shown here</p>
+        </div>
+        <div class="data">
+          <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="button" value="Upload" onclick="uploadFile()">
+        </form>
+        </div>
+        <button id="togglestream" onclick="toggle_stream()">stop streaming</button>
+        <a href="/file"><button>file</button></a>
+      </div>
+    </div>
+    <div class="footer">
+      <button onclick="requestLink('/start')">start</button>
+      <button onclick="requestLink('/status')">status</button>
+      <button onclick="requestLink('/currentprogram')">current program</button>
+      <button onclick="requestLink('/stop')">stop</button>
+    </div>
+    <div class="footer">
+      <button onclick="requestLink('/restart')">restart</button>
+      <button onclick="requestLink('/closebluestack')">close bluestack</button>
+      <button onclick="requestLink('/stopall')">stop all</button>
+      <button onclick="requestLink('/timeout')">time out</button>
+    </div>
+    <script>
+      var state = true;
+      var streaming = document.getElementById('streaming');
+      var togglestream = document.getElementById('togglestream');
+      function toggle_stream(){
+        if (state === true){
+          state = false;
+          streaming.src = "";
+          togglestream.innerHTML = "start streaming";
+        }
+        else{
+          state = true;
+          streaming.src = "{{ url_for('video_feed') }}";
+          togglestream.innerHTML = "stop streaming";
+        }
+      }
+
+      function getImageCoordinates(event) {
+        var img = document.getElementById('streaming');
+        var rect = img.getBoundingClientRect();
+        var x = Math.round(event.clientX - rect.left);
+        var y = Math.round(event.clientY - rect.top);
+
+        var url = '/click?x=' + x + '&y=' + y;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log('Coordinates sent successfully');
+            }
+        };
+        xhr.send();
+      }
+      var data = document.getElementById("datas")
+      function requestLink(url) {
+        $.ajax({
+          url: url,
+          type: "GET",
+          success: function(response) {
+            data.innerHTML = response;
+          },
+          error: function(error) {
+            data.innerHTML = "error\n" + error;
+          }
+        });
+      }
+      function uploadFile() {
+            var form = document.getElementById("upload-form");
+            var formData = new FormData(form);
+
+            var request = new XMLHttpRequest();
+            request.open("POST", "/upload", true);
+
+            request.onreadystatechange = function() {
+                if (request.readyState === 4 && request.status === 200) {
+                    document.getElementById("datas").innerHTML = request.responseText;
+                }
+            };
+
+            request.send(formData);
+        }
+    </script>
+  </body>
+</html>
