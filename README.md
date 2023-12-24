@@ -1,3 +1,7 @@
+#This code only works for the older version of COC which is not usable anymore
+Sorry, i am not interesting developing anymore
+
+
 # COC-Automation
 A python program that can play Clash Of Clans on its own
 
