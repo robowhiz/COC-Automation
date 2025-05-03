@@ -1,5 +1,5 @@
 #This code only works for the older version of COC which is not usable anymore
-Sorry, i am not interesting developing anymore
+Sorry, i am not interested developing anymore
 
 
 # COC-Automation
