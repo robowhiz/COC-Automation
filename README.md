@@ -1,23 +1,38 @@
-#This code only works for the older version of COC which is not usable anymore
-Sorry, i am not interested developing anymore
-
-
 # COC-Automation
-A python program that can play Clash Of Clans on its own
 
-# Disclaimer:
-This project is only for education purpose only
-I am not promoting any game automation programs
-I am not using this program to play the Clash Of Clans game
+**Note: This code is designed for an older version of Clash of Clans and is no longer functional. The project is not under active development.**
 
-# Thing to do in the first boot of the program
--> For this program, you need to install BlueStack Android Emulator, not any other emulators and set the screev refreshing rate to 10 or 20 Hz.
--> Set the Emulator resolution to 2560 × 1440
--> Install Clash Of Clans and log in your id or create a new id
--> The minimum required Town Hall is 5. If the TH is below 5 it won't work
--> Complete the construction of spell factory and unlock wizards in the barracks
--> In the Laboratory, at the first boot of this program, make sure the laboratory is free with all troops upgradable
--> Make sure the army camp is full 
--> The only allowed troop in army camp is Baloons and wizards
+A Python program designed to automate Clash of Clans gameplay.
 
-Still many thing to do for the first boot and this program will work without any error when all the requirements are attained
+### **Disclaimer**
+
+This project is intended for educational purposes only. The creator does not endorse or promote the use of game automation programs and does not use this program for personal gameplay.
+
+---
+
+### **Initial Setup Requirements**
+
+For the program to function correctly, the following conditions must be met during the first boot:
+
+*   **Emulator:** You must have BlueStacks Android Emulator installed. Other emulators are not compatible.
+*   **Emulator Settings:**
+    *   Set the screen refresh rate to 10 or 20 Hz.
+    *   Set the resolution to 2560 × 1440.
+*   **Game Installation:** Install Clash of Clans and log in to your account or create a new one.
+*   **Town Hall Level:** A minimum Town Hall level of 5 is required. The program will not work with Town Hall levels below 5.
+*   **Buildings:**
+    *   The Spell Factory must be constructed.
+*   **Troops:**
+    *   Wizards must be unlocked in the Barracks.
+    *   The only troops allowed in the army camp are Balloons and Wizards.
+    *   The army camp must be full.
+*   **Laboratory:**
+    *   The Laboratory must be free (no ongoing upgrades) at the first boot of the program.
+    *   All troops should be upgradable.
+
+**Note:** This program will only work without errors when all the above requirements are met.
+
+---
+
+### **License**
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
